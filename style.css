@@ -6,10 +6,16 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #d3d0d0;
-    position: relative; /* Indispensable pour que le .container absolu se repère par rapport au body */
+    position: relative; /* Indispensable pour que le .container reste calé en bas à droite */
+    
+    /* Les 3 lignes magiques pour centrer le formulaire */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
 }
+
 
 .container {
     padding: 15px; /* Un peu plus d'espace interne */
@@ -63,3 +69,40 @@ img {
 .box .right a:hover {
     background-color: rgb(85, 85, 150); 
 }
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Évite que le formulaire soit trop large */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments du formulaire verticalement */
+}
+
+form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit; /* Utilise la police Poppins définie plus haut */
+    outline: none;
+}
+
+form input:focus, form textarea:focus {
+    border-color: rgb(113, 113, 184); /* Change la couleur de la bordure quand on clique dessus */
+}
+
