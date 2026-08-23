@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #d3d0d0;
+    position: relative; /* Indispensable pour que le .container absolu se repère par rapport au body */
+}
+
+.container {
+    padding: 15px; /* Un peu plus d'espace interne */
+    position: absolute;
+    background-color: #fff;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.container .box {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 99px;
+    height: 99px;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-left: 6px;
+    object-fit: cover; /* Évite que l'image soit déformée si elle n'est pas parfaitement carrée */
+}
+
+.text-1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333; /* Un noir adouci, plus agréable à l'œil */
+}
+
+.text-2 {
+    font-size: 14px;
+    color: #666; /* Un gris pour créer une hiérarchie visuelle avec le titre */
+    margin-bottom: 5px;
+}
+
+.box .right a {
+    display: block;
+    text-decoration: none;
+    background-color: rgb(113, 113, 184);
+    color: #ffffff; /* CORRECTION : Texte en blanc pour le contraste */
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s; /* Animation fluide pour le survol */
+}
+
+/* EFFET BONUS : Le bouton réagit quand on passe la souris dessus */
+.box .right a:hover {
+    background-color: rgb(85, 85, 150); 
+}
