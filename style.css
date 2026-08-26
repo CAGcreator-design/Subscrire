@@ -4,105 +4,120 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-body {
-    min-height: 100vh;
-    background-color: #d3d0d0;
-    position: relative; /* Indispensable pour que le .container reste calé en bas à droite */
-    
-    /* Les 3 lignes magiques pour centrer le formulaire */
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;     /* Centre verticalement */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: cursive, sans-serif;
 }
-
-
-.container {
-    padding: 15px; /* Un peu plus d'espace interne */
-    position: absolute;
-    background-color: #fff;
-    right: 30px;
-    bottom: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+body {
+    background-color: #f7f9fa; /* Un fond légèrement gris pour faire ressortir le formulaire blanc */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 25px; /* Plus d'espace sous le titre */
+    color: #333;
+}
+form {
+    background-color: #ffffff; /* Fond blanc pur pour un aspect plus propre */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Ombre plus douce et moderne */
+    width: 340px; /* Légèrement plus large pour le confort de lecture */
+    padding: 30px;
+    border-radius: 24px; /* Arrondi élégant et uniforme */
+}
+.for-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espace constant entre chaque bloc de champ */
+}
+label {
+    margin-bottom: 8px;
+    font-size: 14px; /* Taille de police plus standard et élégante pour les labels */
+    font-weight: 600;
+    color: #555;
+}
+input,
+textarea {
+    border: 2px solid #ccc; /* Bordure initiale fine */
+    padding: 10px; /* Plus d'espace intérieur pour faciliter la saisie */
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease; /* Transition globale (bordure, ombre, couleur) */
+}
+textarea {
+    border-radius: 12px;
+    resize: vertical; /* Permet d'agrandir en hauteur uniquement, pas en largeur */
+}
+input {
+    border-radius: 12px; /* Arrondi moderne et cohérent avec le textarea */
+}
+input:focus, 
+textarea:focus {
+    border-color: #2ecc71; /* Un vert plus moderne (Emerald) */
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.3);
+}
+button {
+    width: 100%;
+    padding: 12px; /* Plus épais pour donner envie de cliquer */
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #2ecc71; /* Assorti à la couleur de focus */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer; /* Change le curseur en main au survol */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+button:hover {
+    background-color: #27ae60; /* Vert un peu plus foncé au survol */
+}
+button:active {
+    transform: scale(0.98); /* Léger effet d'enfoncement au clic */
 }
 
 .container .box {
-    display: flex;
     align-items: center;
-}
-
-img {
-    width: 99px;
-    height: 99px;
-    border-radius: 50%;
-    margin-right: 15px;
-    margin-left: 6px;
-    object-fit: cover; /* Évite que l'image soit déformée si elle n'est pas parfaitement carrée */
-}
-
-.text-1 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #333; /* Un noir adouci, plus agréable à l'œil */
-}
-
-.text-2 {
-    font-size: 14px;
-    color: #666; /* Un gris pour créer une hiérarchie visuelle avec le titre */
-    margin-bottom: 5px;
-}
-
-.box .right a {
-    display: block;
-    text-decoration: none;
-    background-color: rgb(113, 113, 184);
-    color: #ffffff; /* CORRECTION : Texte en blanc pour le contraste */
-    padding: 8px;
-    border-radius: 10px;
-    font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s; /* Animation fluide pour le survol */
-}
-
-/* EFFET BONUS : Le bouton réagit quand on passe la souris dessus */
-.box .right a:hover {
-    background-color: rgb(85, 85, 150); 
-}
-form {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px; /* Évite que le formulaire soit trop large */
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
     display: flex;
-    flex-direction: column; /* Aligne les éléments du formulaire verticalement */
+    padding: 25px;
+    background-color: #f2f2f2;
+    border-radius: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+img {
+    margin-right:15px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
-form h2 {
-    margin-bottom: 20px;
-    color: #333;
+}
+.right .text-1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+.right .text-2 {
+    font-size: 15px; 
+}
+.right a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background-color: rgb(70, 70, 137);
+    padding: 3px;
     text-align: center;
+    color: grey;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 20px;
 }
-
-form label {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: inherit; /* Utilise la police Poppins définie plus haut */
-    outline: none;
-}
-
-form input:focus, form textarea:focus {
-    border-color: rgb(113, 113, 184); /* Change la couleur de la bordure quand on clique dessus */
-}
-
